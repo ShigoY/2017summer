@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1322829306170 "http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Ontology1322829306170="http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#Number -->
+
+    <owl:Class rdf:about="&Ontology1322829306170;Number">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Ontology1322829306170;3"/>
+                    <rdf:Description rdf:about="&Ontology1322829306170;4"/>
+                    <rdf:Description rdf:about="&Ontology1322829306170;2"/>
+                    <rdf:Description rdf:about="&Ontology1322829306170;1"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#1 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;1">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+        <owl:sameAs rdf:resource="&Ontology1322829306170;c3_21"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#2 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;2">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+        <owl:sameAs rdf:resource="&Ontology1322829306170;c4_11"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#3 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;3">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+        <owl:sameAs rdf:resource="&Ontology1322829306170;c2_21"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#4 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;4">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+        <owl:sameAs rdf:resource="&Ontology1322829306170;c1_12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c1_11 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c1_11">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c1_12 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c1_12">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c1_21 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c1_21">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c1_22 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c1_22">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c2_11 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c2_11">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c2_12 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c2_12">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c2_21 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c2_21">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c2_22 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c2_22">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c3_11 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c3_11">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c3_12 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c3_12">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c3_21 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c3_21">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c3_22 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c3_22">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c4_11 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c4_11">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c4_12 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c4_12">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c4_21 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c4_21">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/11/Ontology1322829306170.owl#c4_22 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1322829306170;c4_22">
+        <rdf:type rdf:resource="&Ontology1322829306170;Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322829306170;c2_12"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c2_22"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c4_12"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c4_22"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322829306170;c2_11"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c2_12"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c2_21"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c2_22"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322829306170;c1_11"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c1_21"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c3_11"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c3_21"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322829306170;c3_11"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c3_12"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c4_11"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c4_12"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322829306170;c1_12"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c1_22"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c3_12"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c3_22"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322829306170;c3_11"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c3_12"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c3_21"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c3_22"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322829306170;c3_21"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c3_22"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c4_21"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c4_22"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322829306170;c1_11"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c1_12"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c1_21"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c1_22"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322829306170;c1_21"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c1_22"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c2_21"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c2_22"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322829306170;1"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;2"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;3"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;4"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322829306170;c1_11"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c1_12"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c2_11"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c2_12"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322829306170;c2_11"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c2_21"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c4_11"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c4_21"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Ontology1322829306170;c4_11"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c4_12"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c4_21"/>
+            <rdf:Description rdf:about="&Ontology1322829306170;c4_22"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+
