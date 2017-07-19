@@ -12,10 +12,16 @@ class Solver:
         self.instance_str = ''
         self.board = board
         self.new_filename=''
+        self.solution=[]
+
+    def get_solution(self):
+        return self.solution
 
     def on_model(self, model):
-        for term in model.symbols(self,terms=True):
-            print term
+        for atom in model.symbols(atoms=True):
+            if atom.name=="move":
+                self.solution.append(str(atom.arguments[0]))
+                print atom.arguments[0]
 
 
 
@@ -32,9 +38,6 @@ class Solver:
         #out.write("#program base.\n")
         out.write(self.instance_str)
         out.close()
-
-    def get_result(self):
-        pass
 
     def solve_instance(self):
         prg=Control()

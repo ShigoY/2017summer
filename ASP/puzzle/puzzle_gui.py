@@ -1,6 +1,7 @@
 import sys
 import puzzle_board
 import solver
+import time
 from puzzle_board import Board
 from solver import Solver
 from PyQt5.QtWidgets import QWidget,QApplication,QMainWindow,QPushButton,QMessageBox,QVBoxLayout,QHBoxLayout,QFrame
@@ -23,6 +24,8 @@ class GUI(QMainWindow):
 
         button0=QPushButton('generate',self)
         button0.clicked.connect(self.on_click)
+        button1=QPushButton('Display',self)
+        button1.clicked.connect(self.on_display)
         mainLayout=QHBoxLayout()
 
         canvasLayout=QVBoxLayout()
@@ -31,7 +34,9 @@ class GUI(QMainWindow):
         self.canvas=PaintArea(self.board,self.iHeight/4)
 
         canvasLayout.addWidget(self.canvas)
+
         controllerLayout.addWidget(button0)
+        controllerLayout.addWidget(button1)
 
         mainLayout.addLayout(canvasLayout,1)
         mainLayout.addLayout(controllerLayout,1)
@@ -78,10 +83,26 @@ class GUI(QMainWindow):
        sol=Solver(self.board)
        sol.set_instance()
        sol.solve_instance()
+       self.result=sol.get_solution()
 
     @pyqtSlot()
     def on_display(self):
-        pass
+        if len(self.result)==0:
+            print 'Please solve the puzzle first!'
+        else:
+            for step in self.result:
+                if step=='up':
+                    self.board.move([-1,0])
+                elif step=='down':
+                    self.board.move([1,0])
+                elif step=='left':
+                    self.board.move([0,-1])
+                else:
+                    self.board.move([0,1])
+                time.sleep(1)
+                self.canvas.repaint()
+
+        self.result=[]
 
 
     #def keydown:
