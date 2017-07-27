@@ -26,6 +26,8 @@ class GUI(QMainWindow):
         button0.clicked.connect(self.on_click)
         button1=QPushButton('Display',self)
         button1.clicked.connect(self.on_display)
+        #button2=QPushButton('testLayout',self)
+
         mainLayout=QHBoxLayout()
 
         canvasLayout=QVBoxLayout()
@@ -37,9 +39,10 @@ class GUI(QMainWindow):
 
         controllerLayout.addWidget(button0)
         controllerLayout.addWidget(button1)
+        #controllerLayout.addWidget(button2)
 
-        mainLayout.addLayout(canvasLayout,1)
-        mainLayout.addLayout(controllerLayout,1)
+        mainLayout.addLayout(canvasLayout)
+        mainLayout.addLayout(controllerLayout)
 
         self.setCentralWidget(QWidget(self))
         self.centralWidget().setLayout(mainLayout)
