@@ -1,21 +1,14 @@
 package convertor;
 
-import java.io.StringWriter;
 import java.util.HashSet;
 import java.util.stream.Stream;
 
-import org.semanticweb.owlapi.model.HasIRI;
+import org.semanticweb.owlapi.model.AxiomType;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAxiom;
-import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLIndividual;
-import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLNamedObject;
-import org.semanticweb.owlapi.model.OWLObject;
-import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLOntology;
-import org.semanticweb.owlapi.model.OWLProperty;
-import org.semanticweb.owlapi.model.OWLPropertyExpression;
 import org.semanticweb.owlapi.model.parameters.Imports;
 
 public class Convertor {
@@ -51,14 +44,20 @@ public class Convertor {
 	
 	public void convertAxioms(OWLAxiom ax){
 		Visitor v=new Visitor(this,"X",new HashSet<String>(),true);
-		System.out.println(addHeader(ax.accept(v)));
+		if(ax.isOfType(AxiomType.DIFFERENT_INDIVIDUALS)){
+			String []diff=ax.accept(v).split("\n");
+			for(int i=0;i<diff.length;i++){
+				System.out.println(addHeader(diff[i]));
+			}
+		}else{
+			System.out.println(addHeader(ax.accept(v)));
+		}
 	}
 	
 	public String addHeader(String axiom){
 		StringBuffer s=new StringBuffer();
-		s.append("fof(axiom"+Integer.toString(this.count)+","+"axiom,(");
+		s.append("fof(axiom"+Integer.toString(this.count)+","+"axiom,");
 		s.append(axiom);
-		s.append(")");
 		s.append(").");
 		this.count++;
 		return s.toString();

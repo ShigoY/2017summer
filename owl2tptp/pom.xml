@@ -6,6 +6,27 @@
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
+    	<plugin>
+				<!-- Build an executable JAR -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+<!-- 					<includes> -->
+<!-- 						<include>${project.build.directory}/classes/**</include> -->
+<!-- 					</includes> -->
+					<classesDirectory>${project.build.directory}/classes</classesDirectory>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              				<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>.</classpathPrefix>
+							<mainClass>convertor.ConvertorMain.java</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.5.1</version>

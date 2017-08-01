@@ -1,7 +1,4 @@
 package convertor;
-import java.io.PrintWriter;
-import java.io.StringWriter;
-import java.io.Writer;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -10,8 +7,39 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.semanticweb.owlapi.model.*;
-import org.semanticweb.owlapi.util.*;
+import org.semanticweb.owlapi.model.OWLAsymmetricObjectPropertyAxiom;
+import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.OWLClassAssertionAxiom;
+import org.semanticweb.owlapi.model.OWLClassExpression;
+import org.semanticweb.owlapi.model.OWLDifferentIndividualsAxiom;
+import org.semanticweb.owlapi.model.OWLDisjointClassesAxiom;
+import org.semanticweb.owlapi.model.OWLEquivalentClassesAxiom;
+import org.semanticweb.owlapi.model.OWLFunctionalObjectPropertyAxiom;
+import org.semanticweb.owlapi.model.OWLIndividual;
+import org.semanticweb.owlapi.model.OWLInverseFunctionalObjectPropertyAxiom;
+import org.semanticweb.owlapi.model.OWLInverseObjectPropertiesAxiom;
+import org.semanticweb.owlapi.model.OWLIrreflexiveObjectPropertyAxiom;
+import org.semanticweb.owlapi.model.OWLNegativeObjectPropertyAssertionAxiom;
+import org.semanticweb.owlapi.model.OWLObjectAllValuesFrom;
+import org.semanticweb.owlapi.model.OWLObjectComplementOf;
+import org.semanticweb.owlapi.model.OWLObjectExactCardinality;
+import org.semanticweb.owlapi.model.OWLObjectHasValue;
+import org.semanticweb.owlapi.model.OWLObjectIntersectionOf;
+import org.semanticweb.owlapi.model.OWLObjectMaxCardinality;
+import org.semanticweb.owlapi.model.OWLObjectMinCardinality;
+import org.semanticweb.owlapi.model.OWLObjectOneOf;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
+import org.semanticweb.owlapi.model.OWLObjectPropertyAssertionAxiom;
+import org.semanticweb.owlapi.model.OWLObjectPropertyDomainAxiom;
+import org.semanticweb.owlapi.model.OWLObjectPropertyRangeAxiom;
+import org.semanticweb.owlapi.model.OWLObjectSomeValuesFrom;
+import org.semanticweb.owlapi.model.OWLObjectUnionOf;
+import org.semanticweb.owlapi.model.OWLObjectVisitorEx;
+import org.semanticweb.owlapi.model.OWLSameIndividualAxiom;
+import org.semanticweb.owlapi.model.OWLSubClassOfAxiom;
+import org.semanticweb.owlapi.model.OWLSubObjectPropertyOfAxiom;
+import org.semanticweb.owlapi.model.OWLSymmetricObjectPropertyAxiom;
+import org.semanticweb.owlapi.model.OWLTransitiveObjectPropertyAxiom;
 
 //----www.w3.org/TR/2012/REC-owl2-primer-20121211/---
 //---owlapi document----
@@ -121,18 +149,23 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 		StringBuffer s=new StringBuffer();
 		Stream<OWLIndividual> inds=ax.operands();
 		List<OWLIndividual> l_inds=inds.collect(Collectors.toList());
-		s.append("(");
+		int count=0;
 		for(int i=0;i<l_inds.size()-1;i++){
 			for(int j=i+1;j<l_inds.size();j++){
 				if((i!=0)||(j!=1)){
-					s.append("&");
+					if(count%15==0){
+						s.append('\n');
+					}else{
+						s.append("&");
+					}
 				}
 				String s_ind1=convertor.getComponentsID(l_inds.get(i));
 				String s_ind2=convertor.getComponentsID(l_inds.get(j));
 				s.append("("+s_ind1+"!="+s_ind2+")");
+				count++;
+				
 			}
 		}
-		s.append(")");
 		return s.toString();
 	}
 
@@ -198,17 +231,19 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 		StringBuffer s=new StringBuffer();
 		String s_prop=convertor.getComponentsID(ax.getProperty().asOWLObjectProperty());
 		s.append("![X,Y,Z]:(");
-		s.append("("+s_prop+"(X,Y)&"+s_prop+"(X,Z))=>(Y!=Z)");
+		s.append("("+s_prop+"(X,Y)&"+s_prop+"(X,Z))=>(Y=Z)");
 		s.append(")");
 		return s.toString();
 	}
 	
 	public String visit(OWLSubClassOfAxiom ax){
 		StringBuffer s=new StringBuffer();
-		Visitor v=new Visitor(convertor,var,this.occ,true);
+		Visitor v1=new Visitor(convertor,var,this.occ,true);
+		Visitor v2=new Visitor(convertor,var,this.occ,true);
 		s.append("!["+var+"]:");
-		String s_sub=ax.getSubClass().accept(v);
-		String s_super=ax.getSuperClass().accept(v);
+		String s_sub=ax.getSubClass().accept(v1);
+		
+		String s_super=ax.getSuperClass().accept(v2);
 		s.append("("+s_sub+"=>"+s_super+")");
 		return s.toString();
 	}
@@ -325,6 +360,15 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 		String s_prop=convertor.getComponentsID(ax.getProperty().asOWLObjectProperty());
 		s.append("![X,Y]:(");
 		s.append("("+s_prop+"(X,Y)=>~"+s_prop+"(Y,X))");
+		s.append(")");
+		return s.toString();
+	}
+	
+	public String visit(OWLSymmetricObjectPropertyAxiom ax){
+		StringBuffer s=new StringBuffer();
+		String s_prop=convertor.getComponentsID(ax.getProperty().asOWLObjectProperty());
+		s.append("![X,Y]:(");
+		s.append("("+s_prop+"(X,Y)=>"+s_prop+"(Y,X))");
 		s.append(")");
 		return s.toString();
 	}
@@ -449,12 +493,24 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 	public String visit(OWLObjectExactCardinality o){
 		StringBuffer s=new StringBuffer();
 		OWLClassExpression cle=o.asIntersectionOfMinMax();
-		String newVar=getUnusedVar();
-		Visitor v=new Visitor(convertor,newVar,this.occ,true);
+		Visitor v=new Visitor(convertor,var,this.occ,true);
 		s.append("(");
 		s.append(cle.accept(v));
 		s.append(")");
 		return  s.toString();
+	}
+	
+	public String visit(OWLNegativeObjectPropertyAssertionAxiom ax){
+		StringBuffer s=new StringBuffer();
+		String s_prop=convertor.getComponentsID(ax.getProperty().asOWLObjectProperty());
+		String s_sub=convertor.getComponentsID(ax.getSubject());
+		String s_obj=convertor.getComponentsID(ax.getObject());
+		
+		s.append("~");
+		s.append("(");
+		s.append(s_prop+"("+s_sub+","+s_obj+")");
+		s.append(")");
+		return s.toString();
 	}
 	
 }
