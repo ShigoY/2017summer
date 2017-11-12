@@ -25,6 +25,7 @@ import org.semanticweb.owlapi.model.OWLObjectComplementOf;
 import org.semanticweb.owlapi.model.OWLObjectExactCardinality;
 import org.semanticweb.owlapi.model.OWLObjectHasValue;
 import org.semanticweb.owlapi.model.OWLObjectIntersectionOf;
+import org.semanticweb.owlapi.model.OWLObjectInverseOf;
 import org.semanticweb.owlapi.model.OWLObjectMaxCardinality;
 import org.semanticweb.owlapi.model.OWLObjectMinCardinality;
 import org.semanticweb.owlapi.model.OWLObjectOneOf;
@@ -58,6 +59,10 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 		this.occ.add(var);
 		this.flag=flag;
 	}
+	
+	public Visitor(Convertor convertor){
+		this.convertor=convertor;
+	}
 
 	//can only generate X0 X00 X000...
 	public String getUnusedVar(){
@@ -73,11 +78,11 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 		//first we consider the case which there is only one simple class and individual
 		//Named and unnamed? supppose the individual is named
 		OWLClassExpression cl=ax.getClassExpression();
-		Visitor v=new Visitor(convertor,null,this.occ,true);
 		OWLIndividual ind=ax.getIndividual();
-		String s_cl=cl.accept(v);
 		String s_ind=convertor.getComponentsID(ind);
-		s.append(s_cl+"("+s_ind+")");
+		Visitor v=new Visitor(convertor,s_ind,this.occ,true);
+		String s_cl=cl.accept(v);
+		s.append(s_cl);
 		return s.toString();
 	}
 	
@@ -110,7 +115,11 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 		if(var==null){
 			s.append(s_cl);
 		}else{
-			s.append(s_cl+"("+var+")");
+//			if(s_cl.equals("iThing")){
+//				s.append("$true");
+//			}else{
+				s.append(s_cl+"("+var+")");
+//			}
 		}
 		return s.toString();
 	}
@@ -186,6 +195,14 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 		s.append("![X,Y]:("+s_sub_prop+"(X,Y)=>"+s_super_prop+"(X,Y))");
 		return s.toString();
 	}
+	public String visit(OWLObjectInverseOf o){
+		StringBuffer s=new StringBuffer();
+		OWLObjectProperty prop=o.getInverse().asOWLObjectProperty();
+		String s_prop=convertor.getComponentsID(prop);
+		convertor.addInverseRoles(s_prop);
+		return s.append("inv_"+s_prop).toString();
+	}
+	
 	
 	public String visit(OWLInverseObjectPropertiesAxiom ax){
 		StringBuffer s=new StringBuffer();
@@ -314,7 +331,8 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 	
 	public String visit(OWLObjectSomeValuesFrom o){
 		StringBuffer s=new StringBuffer();
-		String s_prop=convertor.getComponentsID(o.getProperty().asOWLObjectProperty());
+		Visitor vp=new Visitor(convertor);
+		String s_prop=o.getProperty().accept(vp);
 		String newVar=getUnusedVar();
 		Visitor v=new Visitor(convertor,newVar,this.occ,true);
 		String filler=o.getFiller().accept(v);
@@ -326,9 +344,16 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 		return s.toString();
 	}
 	
+	public String visit(OWLObjectProperty o){
+		StringBuffer s=new StringBuffer();
+		String s_prop=convertor.getComponentsID(o);
+		return s.append(s_prop).toString();
+	}
+	
 	public String visit(OWLObjectAllValuesFrom o){
 		StringBuffer s=new StringBuffer();
-		String s_prop=convertor.getComponentsID(o.getProperty().asOWLObjectProperty());
+		Visitor vp=new Visitor(convertor);
+		String s_prop=o.getProperty().accept(vp);
 		String newVar=getUnusedVar();
 		Visitor v=new Visitor(convertor,newVar,this.occ,true);
 		String filler=o.getFiller().accept(v);
@@ -450,7 +475,8 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 			s.append("&");
 		}
 		for(int i=1;i<=card;i++){
-			String s_prop=convertor.getComponentsID(o.getProperty().asOWLObjectProperty());
+			Visitor vp=new Visitor(convertor);
+			String s_prop=o.getProperty().accept(vp);
 			Visitor v=new Visitor(convertor,var+Integer.toString(i),this.occ,true);
 			String s_cls=o.getFiller().accept(v);
 			s.append("("+s_prop+"("+var+","+var+Integer.toString(i)+")&"+s_cls+")");
