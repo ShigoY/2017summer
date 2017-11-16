@@ -7,7 +7,6 @@ import org.semanticweb.owlapi.model.AxiomType;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLIndividual;
-import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLNamedObject;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.parameters.Imports;
@@ -79,41 +78,26 @@ public class Convertor {
 		return s.toString();
 	}
 	
-	public void addFiniteDomain(OWLOntology ontology){
-		try{
-			Stream<OWLNamedIndividual> inds=ontology.individualsInSignature(Imports.INCLUDED);
-			StringBuffer s=new StringBuffer();
-			s.append("![X]:(");
-			s.append("iThing(X)=>(");
-			inds.forEach(p->s.append("X="+this.getComponentsID((OWLIndividual)p)+"|"));
-			s.deleteCharAt(s.length()-1);
-			s.append("))");
-			System.out.println(addHeader(s.toString(),"fi"));
-		}catch(NullPointerException e){
-			System.out.println("no domain element specified.");
-			e.printStackTrace();
-		}
-	}
 	
-	public void addInverseRoles(String str){
-		StringBuffer s=new StringBuffer();
-		s.append("![X,Y]:(inv_"+str+"(X,Y)<=>"+str+"(Y,X))");
-		System.out.println(addHeader(s.toString(),"inverse"));
-	}
 	
-	public void addThings(OWLOntology ontology){
-		Stream<OWLNamedIndividual> inds=ontology.individualsInSignature(Imports.INCLUDED);
-		inds.forEach(p->System.out.println(addHeader("iThing("+this.getComponentsID((OWLIndividual)p)+")","axiom")));
-	}
+	
+	
+//	public void addThings(OWLOntology ontology){
+//		Stream<OWLNamedIndividual> inds=ontology.individualsInSignature(Imports.INCLUDED);
+//		inds.forEach(p->System.out.println(addHeader("iThing("+this.getComponentsID((OWLIndividual)p)+")","axiom")));
+//	}
 	
 	public void produceTPTP(OWLOntology ontology){
+		AuxiliaryAxioms.set_convertor(this);
 		System.out.println("%---------finite domain---------");
-		addFiniteDomain(ontology);
+		AuxiliaryAxioms.addFixedDomainInClasses(ontology);
+		AuxiliaryAxioms.addFixedDomainInProperties(ontology);
+		AuxiliaryAxioms.addFixedDomainAxiom(ontology);
 		
 		Stream<OWLAxiom> abox=ontology.aboxAxioms(Imports.INCLUDED);
 		System.out.println("%----------ABox-----------------");
 		//abox.forEach(p->System.out.println(p));
-		addThings(ontology);
+		//addThings(ontology);
 		abox.forEach(p->convertAxioms(p));
 //		
 		System.out.println("");
@@ -127,5 +111,7 @@ public class Convertor {
 		Stream<OWLAxiom> tbox=ontology.tboxAxioms(Imports.INCLUDED);
 		tbox.forEach(p->convertAxioms(p));
 		//tbox.forEach(p->System.out.println(p));
+		System.out.println("%----------inverse roles-----------------");
+		AuxiliaryAxioms.addInverseRoles();
 	}
 }

@@ -32,6 +32,7 @@ import org.semanticweb.owlapi.model.OWLObjectOneOf;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLObjectPropertyAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLObjectPropertyDomainAxiom;
+import org.semanticweb.owlapi.model.OWLObjectPropertyExpression;
 import org.semanticweb.owlapi.model.OWLObjectPropertyRangeAxiom;
 import org.semanticweb.owlapi.model.OWLObjectSomeValuesFrom;
 import org.semanticweb.owlapi.model.OWLObjectUnionOf;
@@ -39,6 +40,7 @@ import org.semanticweb.owlapi.model.OWLObjectVisitorEx;
 import org.semanticweb.owlapi.model.OWLSameIndividualAxiom;
 import org.semanticweb.owlapi.model.OWLSubClassOfAxiom;
 import org.semanticweb.owlapi.model.OWLSubObjectPropertyOfAxiom;
+import org.semanticweb.owlapi.model.OWLSubPropertyChainOfAxiom;
 import org.semanticweb.owlapi.model.OWLSymmetricObjectPropertyAxiom;
 import org.semanticweb.owlapi.model.OWLTransitiveObjectPropertyAxiom;
 
@@ -49,6 +51,7 @@ import org.semanticweb.owlapi.model.OWLTransitiveObjectPropertyAxiom;
 public class Visitor implements OWLObjectVisitorEx<String>{
 	private Convertor convertor;
 	private String var;
+	private String role_x,role_y;
 	private Set<String> occ;
 	private boolean flag;
 	public Visitor(Convertor convertor,String var,Set<String> occ,boolean flag){
@@ -58,6 +61,12 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 		this.occ=new HashSet<String>(occ);
 		this.occ.add(var);
 		this.flag=flag;
+	}
+	
+	public Visitor(Convertor convertor,String role_x,String role_y){
+		this.convertor=convertor;
+		this.role_x=role_x;
+		this.role_y=role_y;
 	}
 	
 	public Visitor(Convertor convertor){
@@ -104,11 +113,7 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 		return s.toString();
 	}
 	
-//	public String visit(OWLObjectProperty o){
-//		StringBuffer s=new StringBuffer();
-//		s.toString();
-//	}
-//	
+	
 	public String visit(OWLClass o){
 		StringBuffer s=new StringBuffer();
 		String s_cl=convertor.getComponentsID(o.asOWLClass());
@@ -199,7 +204,7 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 		StringBuffer s=new StringBuffer();
 		OWLObjectProperty prop=o.getInverse().asOWLObjectProperty();
 		String s_prop=convertor.getComponentsID(prop);
-		convertor.addInverseRoles(s_prop);
+		AuxiliaryAxioms.toSet(s_prop);
 		return s.append("inv_"+s_prop).toString();
 	}
 	
@@ -347,7 +352,12 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 	public String visit(OWLObjectProperty o){
 		StringBuffer s=new StringBuffer();
 		String s_prop=convertor.getComponentsID(o);
-		return s.append(s_prop).toString();
+		if(role_x!=null&&role_y!=null){
+			s.append(s_prop+"("+role_x+","+role_y+")").toString();
+		}else{
+			s.append(s_prop);
+		}
+		return s.toString();
 	}
 	
 	public String visit(OWLObjectAllValuesFrom o){
@@ -539,4 +549,35 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 		return s.toString();
 	}
 	
+	public String visit(OWLSubPropertyChainOfAxiom ax){
+		StringBuffer s=new StringBuffer();
+		StringBuffer chain=new StringBuffer();
+		List<OWLObjectPropertyExpression> li_sub=ax.getPropertyChain();
+		OWLObjectPropertyExpression ex=ax.getSuperProperty();
+		Visitor v=new Visitor(convertor,"X","Y");
+		String s_super=ex.accept(v);
+		int var_len=li_sub.size()+1;
+		s.append("![X,");
+		for(int i=1;i<var_len;i++){
+			s.append("X"+Integer.toString(i)+",");
+			String role_x,role_y;
+			if(i==1){
+				role_x="X";
+				role_y="X"+Integer.toString(i);
+			}else if(i==var_len-1){
+				role_x="X"+Integer.toString(i-1);
+				role_y="Y";
+			}else{
+				role_x="X"+Integer.toString(i-1);
+				role_y="X"+Integer.toString(i);
+			}
+			
+			Visitor vx=new Visitor(convertor,role_x,role_y);
+			chain.append(li_sub.get(i).accept(vx)+"&");
+		}
+		s.deleteCharAt(s.length()-1);
+		chain.deleteCharAt(chain.length()-1);
+		s.append("]:("+chain.toString()+")=>"+s_super+")");
+		return s.toString();
+	}
 }
