@@ -1,0 +1,715 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/iccl/ontologies/3Coloring"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/iccl/ontologies/3Coloring">
+    <Prefix name="" IRI="http://www.semanticweb.org/iccl/ontologies/3Coloring"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Some simple axioms defining the 3Colorability problem of a given graph structure.</Literal>
+    </Annotation>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/nodes/#n1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n8"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n14"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n18"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n20"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n19"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n5"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n13"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n17"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#n15"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+            <ObjectUnionOf>
+                <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+                <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+            <ObjectUnionOf>
+                <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+                <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+            <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+            <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode"/>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+            <ObjectUnionOf>
+                <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+                <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n13"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n14"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n15"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n17"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n19"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="#n9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n10"/>
+        <NamedIndividual IRI="#n9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n10"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n11"/>
+        <NamedIndividual IRI="#n5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n11"/>
+        <NamedIndividual IRI="#n7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n11"/>
+        <NamedIndividual IRI="#n9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n12"/>
+        <NamedIndividual IRI="#n9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n12"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n13"/>
+        <NamedIndividual IRI="#n9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n13"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n14"/>
+        <NamedIndividual IRI="#n13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n14"/>
+        <NamedIndividual IRI="#n7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n14"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n15"/>
+        <NamedIndividual IRI="#n13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n15"/>
+        <NamedIndividual IRI="#n7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n15"/>
+        <NamedIndividual IRI="#n9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n15"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n16"/>
+        <NamedIndividual IRI="#n11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n16"/>
+        <NamedIndividual IRI="#n6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n16"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n16"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n17"/>
+        <NamedIndividual IRI="#n10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n17"/>
+        <NamedIndividual IRI="#n12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n17"/>
+        <NamedIndividual IRI="#n5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n17"/>
+        <NamedIndividual IRI="#n7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n17"/>
+        <NamedIndividual IRI="#n8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n17"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n18"/>
+        <NamedIndividual IRI="#n16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n18"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n18"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n19"/>
+        <NamedIndividual IRI="#n14"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n19"/>
+        <NamedIndividual IRI="#n16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n19"/>
+        <NamedIndividual IRI="#n8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n19"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n20"/>
+        <NamedIndividual IRI="#n12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n20"/>
+        <NamedIndividual IRI="#n17"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n20"/>
+        <NamedIndividual IRI="#n19"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n20"/>
+        <NamedIndividual IRI="#n6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n20"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n5"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n5"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n6"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n6"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n7"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n7"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n8"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n8"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n9"/>
+        <NamedIndividual IRI="#n5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n9"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n9"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </ObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n10"/>
+        <NamedIndividual IRI="#n5"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n10"/>
+        <NamedIndividual IRI="#n6"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n10"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n10"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n11"/>
+        <NamedIndividual IRI="#n8"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n11"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n11"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n12"/>
+        <NamedIndividual IRI="#n11"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n12"/>
+        <NamedIndividual IRI="#n7"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n13"/>
+        <NamedIndividual IRI="#n10"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n13"/>
+        <NamedIndividual IRI="#n8"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n14"/>
+        <NamedIndividual IRI="#n6"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n14"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n14"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n15"/>
+        <NamedIndividual IRI="#n5"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n15"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n16"/>
+        <NamedIndividual IRI="#n13"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n16"/>
+        <NamedIndividual IRI="#n14"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n16"/>
+        <NamedIndividual IRI="#n8"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n17"/>
+        <NamedIndividual IRI="#n13"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n17"/>
+        <NamedIndividual IRI="#n14"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n17"/>
+        <NamedIndividual IRI="#n15"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n18"/>
+        <NamedIndividual IRI="#n10"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n18"/>
+        <NamedIndividual IRI="#n8"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n18"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n19"/>
+        <NamedIndividual IRI="#n5"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n19"/>
+        <NamedIndividual IRI="#n6"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n19"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n20"/>
+        <NamedIndividual IRI="#n11"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n20"/>
+        <NamedIndividual IRI="#n5"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n20"/>
+        <NamedIndividual IRI="#n8"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n20"/>
+        <NamedIndividual IRI="#n9"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n5"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n6"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n7"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n7"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n8"/>
+        <NamedIndividual IRI="#n5"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n9"/>
+        <NamedIndividual IRI="#n7"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="#n9"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </NegativeObjectPropertyAssertion>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+    </SymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+    </IrreflexiveObjectProperty>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
