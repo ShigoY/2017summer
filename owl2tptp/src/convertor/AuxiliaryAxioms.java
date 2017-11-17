@@ -27,14 +27,14 @@ public class AuxiliaryAxioms {
 	public static String fixedDomainInClass(OWLClass c){
 		StringBuffer s=new StringBuffer();
 		String cname=convertor.getComponentsID(c);
-		s.append("![X]:("+cname+"(X)=>iThing(X))");
+		s.append("![X]:(("+cname+"(X)=>iThing(X))&(~"+cname+"(X)=>iThing(X)))");
 		return s.toString();
 	}
 	
 	public static String fixedDomainInObjectProperty(OWLObjectProperty r){
 		StringBuffer s=new StringBuffer();
 		String rname=convertor.getComponentsID(r);
-		s.append("![X,Y]:("+rname+"(X,Y)=>(iThing(X)&iThing(Y)))");
+		s.append("![X,Y]:(("+rname+"(X,Y)=>(iThing(X)&iThing(Y)))&(~"+rname+"(X,Y)=>(iThing(X)&iThing(Y))))");
 		return s.toString();
 	}
 	
@@ -57,7 +57,7 @@ public class AuxiliaryAxioms {
 			inds.forEach(p->s.append("X="+convertor.getComponentsID((OWLIndividual)p)+"|"));
 			s.deleteCharAt(s.length()-1);
 			s.append(")");
-			if(s.equals("")) {
+			if(s.equals("")==false) {
 				System.out.println(convertor.addHeader(s.toString(),"fi"));
 			}
 		}catch(NullPointerException e){
