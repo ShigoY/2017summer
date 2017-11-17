@@ -573,7 +573,7 @@ public class Visitor implements OWLObjectVisitorEx<String>{
 			}
 			
 			Visitor vx=new Visitor(convertor,role_x,role_y);
-			chain.append(li_sub.get(i).accept(vx)+"&");
+			chain.append(li_sub.get(i-1).accept(vx)+"&");
 		}
 		s.deleteCharAt(s.length()-1);
 		chain.deleteCharAt(chain.length()-1);

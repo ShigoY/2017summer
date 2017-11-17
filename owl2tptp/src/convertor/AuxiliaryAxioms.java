@@ -51,13 +51,17 @@ public class AuxiliaryAxioms {
 	public static void addFixedDomainAxiom(OWLOntology ontology){
 		try{
 			Stream<OWLNamedIndividual> inds=ontology.individualsInSignature(Imports.INCLUDED);
-			StringBuffer s=new StringBuffer();
-			s.append("![X]:(");
-			s.append("iThing(X)=>(");
-			inds.forEach(p->s.append("X="+convertor.getComponentsID((OWLIndividual)p)+"|"));
-			s.deleteCharAt(s.length()-1);
-			s.append("))");
-			System.out.println(convertor.addHeader(s.toString(),"fi"));
+			if(inds.count()!=0) {
+				StringBuffer s=new StringBuffer();
+				s.append("![X]:(");
+				//s.append("iThing(X)=>(");
+				inds.forEach(p->s.append("X="+convertor.getComponentsID((OWLIndividual)p)+"|"));
+				s.deleteCharAt(s.length()-1);
+				s.append(")");
+				System.out.println(convertor.addHeader(s.toString(),"fi"));
+			}else {
+				
+			}
 		}catch(NullPointerException e){
 			System.out.println("no domain element specified.");
 			e.printStackTrace();

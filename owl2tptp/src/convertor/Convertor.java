@@ -90,8 +90,8 @@ public class Convertor {
 	public void produceTPTP(OWLOntology ontology){
 		AuxiliaryAxioms.set_convertor(this);
 		System.out.println("%---------finite domain---------");
-		AuxiliaryAxioms.addFixedDomainInClasses(ontology);
-		AuxiliaryAxioms.addFixedDomainInProperties(ontology);
+		//AuxiliaryAxioms.addFixedDomainInClasses(ontology);
+		//AuxiliaryAxioms.addFixedDomainInProperties(ontology);
 		AuxiliaryAxioms.addFixedDomainAxiom(ontology);
 		
 		Stream<OWLAxiom> abox=ontology.aboxAxioms(Imports.INCLUDED);
