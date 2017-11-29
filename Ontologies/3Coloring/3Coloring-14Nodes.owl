@@ -184,6 +184,22 @@
         <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
         <NamedIndividual IRI="/nodes/#n4"/>
     </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#n10"/>
+        <NamedIndividual IRI="#n11"/>
+        <NamedIndividual IRI="#n12"/>
+        <NamedIndividual IRI="#n13"/>
+        <NamedIndividual IRI="#n14"/>
+        <NamedIndividual IRI="#n5"/>
+        <NamedIndividual IRI="#n6"/>
+        <NamedIndividual IRI="#n7"/>
+        <NamedIndividual IRI="#n8"/>
+        <NamedIndividual IRI="#n9"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
         <NamedIndividual IRI="#n10"/>

@@ -32,10 +32,10 @@
         <NamedIndividual IRI="/nodes/#n4"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/nodes/#n3"/>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#n8"/>
@@ -47,10 +47,10 @@
         <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#n5"/>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+        <NamedIndividual IRI="#n5"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#n6"/>
@@ -156,6 +156,18 @@
         <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
         <NamedIndividual IRI="/nodes/#n4"/>
     </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#n10"/>
+        <NamedIndividual IRI="#n5"/>
+        <NamedIndividual IRI="#n6"/>
+        <NamedIndividual IRI="#n7"/>
+        <NamedIndividual IRI="#n8"/>
+        <NamedIndividual IRI="#n9"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
         <NamedIndividual IRI="#n10"/>

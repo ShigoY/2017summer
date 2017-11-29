@@ -1,209 +1,287 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/seating-problem"
      xml:base="http://www.semanticweb.org/ontologies/seating-problem"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/ontologies/seating-problem">
-    <Prefix name="" IRI="http://www.semanticweb.org/ontologies/seating-problem"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Declaration>
-        <ObjectProperty IRI="http://www.example.org/owl#sits"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.example.org/owl#alice"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.example.org/owl#claire"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.example.org/owl#bob"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.example.org/owl#eve"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.example.org/owl#fl"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.example.org/owl#fr"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.example.org/owl#bl"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.example.org/owl#bm"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.example.org/owl#br"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.example.org/owl#Drunk"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.example.org/owl#Woman"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.example.org/owl#Seat"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.example.org/owl#Man"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.example.org/owl#next"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.example.org/owl#dan"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.example.org/owl#Person"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="http://www.example.org/owl#Person"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.example.org/owl#sits"/>
-            <Class IRI="http://www.example.org/owl#Seat"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.example.org/owl#Woman"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="http://www.example.org/owl#sits"/>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="http://www.example.org/owl#next"/>
-                <ObjectAllValuesFrom>
-                    <ObjectInverseOf>
-                        <ObjectProperty IRI="http://www.example.org/owl#sits"/>
-                    </ObjectInverseOf>
-                    <ObjectComplementOf>
-                        <Class IRI="http://www.example.org/owl#Man"/>
-                    </ObjectComplementOf>
-                </ObjectAllValuesFrom>
-            </ObjectAllValuesFrom>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="owl:Thing"/>
-        <ObjectMaxCardinality cardinality="1">
-            <ObjectInverseOf>
-                <ObjectProperty IRI="http://www.example.org/owl#sits"/>
-            </ObjectInverseOf>
-        </ObjectMaxCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectUnionOf>
-            <Class IRI="http://www.example.org/owl#Man"/>
-            <Class IRI="http://www.example.org/owl#Woman"/>
-        </ObjectUnionOf>
-        <Class IRI="http://www.example.org/owl#Person"/>
-    </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="http://www.example.org/owl#Person"/>
-        <Class IRI="http://www.example.org/owl#Seat"/>
-    </DisjointClasses>
-    <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="http://www.example.org/owl#Drunk"/>
-            <Class IRI="http://www.example.org/owl#Woman"/>
-        </ObjectIntersectionOf>
-        <NamedIndividual IRI="http://www.example.org/owl#alice"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.example.org/owl#Seat"/>
-        <NamedIndividual IRI="http://www.example.org/owl#bl"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.example.org/owl#Seat"/>
-        <NamedIndividual IRI="http://www.example.org/owl#bm"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="http://www.example.org/owl#Drunk"/>
-            <Class IRI="http://www.example.org/owl#Man"/>
-        </ObjectIntersectionOf>
-        <NamedIndividual IRI="http://www.example.org/owl#bob"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.example.org/owl#Seat"/>
-        <NamedIndividual IRI="http://www.example.org/owl#br"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.example.org/owl#Woman"/>
-        <NamedIndividual IRI="http://www.example.org/owl#claire"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="http://www.example.org/owl#Drunk"/>
-            <Class IRI="http://www.example.org/owl#Man"/>
-        </ObjectIntersectionOf>
-        <NamedIndividual IRI="http://www.example.org/owl#dan"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.example.org/owl#Woman"/>
-        <NamedIndividual IRI="http://www.example.org/owl#eve"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.example.org/owl#Seat"/>
-        <NamedIndividual IRI="http://www.example.org/owl#fl"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <ObjectSomeValuesFrom>
-            <ObjectInverseOf>
-                <ObjectProperty IRI="http://www.example.org/owl#sits"/>
-            </ObjectInverseOf>
-            <ObjectIntersectionOf>
-                <Class IRI="http://www.example.org/owl#Person"/>
-                <ObjectComplementOf>
-                    <Class IRI="http://www.example.org/owl#Drunk"/>
-                </ObjectComplementOf>
-            </ObjectIntersectionOf>
-        </ObjectSomeValuesFrom>
-        <NamedIndividual IRI="http://www.example.org/owl#fl"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.example.org/owl#Seat"/>
-        <NamedIndividual IRI="http://www.example.org/owl#fr"/>
-    </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.example.org/owl#next"/>
-        <NamedIndividual IRI="http://www.example.org/owl#bm"/>
-        <NamedIndividual IRI="http://www.example.org/owl#bl"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.example.org/owl#next"/>
-        <NamedIndividual IRI="http://www.example.org/owl#br"/>
-        <NamedIndividual IRI="http://www.example.org/owl#bm"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.example.org/owl#next"/>
-        <NamedIndividual IRI="http://www.example.org/owl#fr"/>
-        <NamedIndividual IRI="http://www.example.org/owl#fl"/>
-    </ObjectPropertyAssertion>
-    <SymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.example.org/owl#next"/>
-    </SymmetricObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.example.org/owl#next"/>
-        <Class IRI="http://www.example.org/owl#Seat"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.example.org/owl#sits"/>
-        <Class IRI="http://www.example.org/owl#Person"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.example.org/owl#next"/>
-        <Class IRI="http://www.example.org/owl#Seat"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.example.org/owl#sits"/>
-        <Class IRI="http://www.example.org/owl#Seat"/>
-    </ObjectPropertyRange>
-</Ontology>
+     xmlns:owl1="http://www.example.org/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/seating-problem"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/owl#next -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/owl#next">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/owl#Seat"/>
+        <rdfs:range rdf:resource="http://www.example.org/owl#Seat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/owl#sits -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/owl#sits">
+        <rdfs:domain rdf:resource="http://www.example.org/owl#Person"/>
+        <rdfs:range rdf:resource="http://www.example.org/owl#Seat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/owl#Drunk -->
+
+    <owl:Class rdf:about="http://www.example.org/owl#Drunk"/>
+    
+
+
+    <!-- http://www.example.org/owl#Man -->
+
+    <owl:Class rdf:about="http://www.example.org/owl#Man"/>
+    
+
+
+    <!-- http://www.example.org/owl#Person -->
+
+    <owl:Class rdf:about="http://www.example.org/owl#Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/owl#sits"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/owl#Seat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.example.org/owl#Seat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/owl#Seat -->
+
+    <owl:Class rdf:about="http://www.example.org/owl#Seat"/>
+    
+
+
+    <!-- http://www.example.org/owl#Woman -->
+
+    <owl:Class rdf:about="http://www.example.org/owl#Woman">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/owl#sits"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.example.org/owl#next"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty>
+                                    <rdf:Description>
+                                        <owl:inverseOf rdf:resource="http://www.example.org/owl#sits"/>
+                                    </rdf:Description>
+                                </owl:onProperty>
+                                <owl:allValuesFrom>
+                                    <owl:Class>
+                                        <owl:complementOf rdf:resource="http://www.example.org/owl#Man"/>
+                                    </owl:Class>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.example.org/owl#sits"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/owl#alice -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/owl#alice">
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/owl#Drunk"/>
+                    <rdf:Description rdf:about="http://www.example.org/owl#Woman"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/owl#bl -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/owl#bl">
+        <rdf:type rdf:resource="http://www.example.org/owl#Seat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/owl#bm -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/owl#bm">
+        <rdf:type rdf:resource="http://www.example.org/owl#Seat"/>
+        <owl1:next rdf:resource="http://www.example.org/owl#bl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/owl#bob -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/owl#bob">
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/owl#Drunk"/>
+                    <rdf:Description rdf:about="http://www.example.org/owl#Man"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/owl#br -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/owl#br">
+        <rdf:type rdf:resource="http://www.example.org/owl#Seat"/>
+        <owl1:next rdf:resource="http://www.example.org/owl#bm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/owl#claire -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/owl#claire">
+        <rdf:type rdf:resource="http://www.example.org/owl#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/owl#dan -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/owl#dan">
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/owl#Drunk"/>
+                    <rdf:Description rdf:about="http://www.example.org/owl#Man"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/owl#eve -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/owl#eve">
+        <rdf:type rdf:resource="http://www.example.org/owl#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/owl#fl -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/owl#fl">
+        <rdf:type rdf:resource="http://www.example.org/owl#Seat"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.example.org/owl#sits"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.example.org/owl#Person"/>
+                            <owl:Class>
+                                <owl:complementOf rdf:resource="http://www.example.org/owl#Drunk"/>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/owl#fr -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/owl#fr">
+        <rdf:type rdf:resource="http://www.example.org/owl#Seat"/>
+        <owl1:next rdf:resource="http://www.example.org/owl#fl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/owl#Man"/>
+            <rdf:Description rdf:about="http://www.example.org/owl#Woman"/>
+        </owl:unionOf>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/owl#Person"/>
+    </owl:Class>
+</rdf:RDF>
 
 
 
