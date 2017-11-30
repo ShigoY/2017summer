@@ -1,115 +1,159 @@
-@prefix : <http://www.w3.org/2002/07/owl#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/iccl/ontologies/3Coloring> .
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/iccl/ontologies/3Coloring"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/iccl/ontologies/3Coloring">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Some simple axioms defining the 3Colorability problem of a given graph structure.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/nodes/#n1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+            <ObjectUnionOf>
+                <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+                <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+            <ObjectUnionOf>
+                <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+                <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+            <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+            <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode"/>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+            <ObjectUnionOf>
+                <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode"/>
+                <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#Node"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="/nodes/#n1"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="/nodes/#n2"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </ObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="/nodes/#n1"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+        <NamedIndividual IRI="/nodes/#n3"/>
+        <NamedIndividual IRI="/nodes/#n4"/>
+    </NegativeObjectPropertyAssertion>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+    </SymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org./iccl/ontologies/3Coloring#edge"/>
+    </IrreflexiveObjectProperty>
+</Ontology>
 
-<http://www.semanticweb.org/iccl/ontologies/3Coloring> rdf:type owl:Ontology ;
-                                                        rdfs:comment "Some simple axioms defining the 3Colorability problem of a given graph structure." .
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://www.semanticweb.org./iccl/ontologies/3Coloring#edge
-<http://www.semanticweb.org./iccl/ontologies/3Coloring#edge> rdf:type owl:ObjectProperty ,
-                                                                      owl:SymmetricProperty ,
-                                                                      owl:IrreflexiveProperty .
 
 
-#################################################################
-#    Classes
-#################################################################
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
-###  http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode
-<http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf <http://www.semanticweb.org./iccl/ontologies/3Coloring#Node> ,
-                                                                                 [ rdf:type owl:Restriction ;
-                                                                                   owl:onProperty <http://www.semanticweb.org./iccl/ontologies/3Coloring#edge> ;
-                                                                                   owl:allValuesFrom [ rdf:type owl:Class ;
-                                                                                                       owl:unionOf ( <http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode>
-                                                                                                                     <http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode>
-                                                                                                                   )
-                                                                                                     ]
-                                                                                 ] .
-
-
-###  http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode
-<http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf <http://www.semanticweb.org./iccl/ontologies/3Coloring#Node> ,
-                                                                                  [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty <http://www.semanticweb.org./iccl/ontologies/3Coloring#edge> ;
-                                                                                    owl:allValuesFrom [ rdf:type owl:Class ;
-                                                                                                        owl:unionOf ( <http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode>
-                                                                                                                      <http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode>
-                                                                                                                    )
-                                                                                                      ]
-                                                                                  ] .
-
-
-###  http://www.semanticweb.org./iccl/ontologies/3Coloring#Node
-<http://www.semanticweb.org./iccl/ontologies/3Coloring#Node> rdf:type owl:Class ;
-                                                             rdfs:subClassOf [ rdf:type owl:Class ;
-                                                                               owl:unionOf ( <http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode>
-                                                                                             <http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode>
-                                                                                             <http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode>
-                                                                                           )
-                                                                             ] .
-
-
-###  http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode
-<http://www.semanticweb.org./iccl/ontologies/3Coloring#RedNode> rdf:type owl:Class ;
-                                                                rdfs:subClassOf <http://www.semanticweb.org./iccl/ontologies/3Coloring#Node> ,
-                                                                                [ rdf:type owl:Restriction ;
-                                                                                  owl:onProperty <http://www.semanticweb.org./iccl/ontologies/3Coloring#edge> ;
-                                                                                  owl:allValuesFrom [ rdf:type owl:Class ;
-                                                                                                      owl:unionOf ( <http://www.semanticweb.org./iccl/ontologies/3Coloring#BlueNode>
-                                                                                                                    <http://www.semanticweb.org./iccl/ontologies/3Coloring#GreenNode>
-                                                                                                                  )
-                                                                                                    ]
-                                                                                ] .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n1
-<http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n1> rdf:type owl:NamedIndividual ,
-                                                                          <http://www.semanticweb.org./iccl/ontologies/3Coloring#Node> ;
-                                                                 <http://www.semanticweb.org./iccl/ontologies/3Coloring#edge> <http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n2> ,
-                                                                                                                              <http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n3> .
-
-[ rdf:type owl:NegativePropertyAssertion ;
-   owl:sourceIndividual <http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n1> ;
-   owl:assertionProperty <http://www.semanticweb.org./iccl/ontologies/3Coloring#edge> ;
-   owl:targetIndividual <http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n4>
- ] .
-
-
-###  http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n2
-<http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n2> rdf:type owl:NamedIndividual ,
-                                                                          <http://www.semanticweb.org./iccl/ontologies/3Coloring#Node> ;
-                                                                 <http://www.semanticweb.org./iccl/ontologies/3Coloring#edge> <http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n3> ,
-                                                                                                                              <http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n4> .
-
-
-###  http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n3
-<http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n3> rdf:type owl:NamedIndividual ,
-                                                                          <http://www.semanticweb.org./iccl/ontologies/3Coloring#Node> .
-
-[ rdf:type owl:NegativePropertyAssertion ;
-   owl:sourceIndividual <http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n3> ;
-   owl:assertionProperty <http://www.semanticweb.org./iccl/ontologies/3Coloring#edge> ;
-   owl:targetIndividual <http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n4>
- ] .
-
-
-###  http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n4
-<http://www.semanticweb.org/iccl/ontologies/3Coloring/nodes/#n4> rdf:type owl:NamedIndividual ,
-                                                                          <http://www.semanticweb.org./iccl/ontologies/3Coloring#Node> .
-
-
-###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
