@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/seating-problem"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/ontologies/seating-problem">
+    <Prefix name="" IRI="http://www.semanticweb.org/ontologies/seating-problem"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl1" IRI="http://www.example.org/owl#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="owl1:sits"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="owl1:alice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="owl1:claire"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="owl1:bob"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="owl1:fl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="owl1:eve"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="owl1:fr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="owl1:bl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="owl1:bm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="owl1:br"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl1:Woman"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl1:Drunk"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl1:Seat"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl1:Man"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="owl1:next"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="owl1:dan"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl1:Person"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl1:Person"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl1:sits"/>
+            <Class abbreviatedIRI="owl1:Seat"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl1:Woman"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl1:sits"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="owl1:next"/>
+                <ObjectAllValuesFrom>
+                    <ObjectInverseOf>
+                        <ObjectProperty abbreviatedIRI="owl1:sits"/>
+                    </ObjectInverseOf>
+                    <ObjectComplementOf>
+                        <Class abbreviatedIRI="owl1:Man"/>
+                    </ObjectComplementOf>
+                </ObjectAllValuesFrom>
+            </ObjectAllValuesFrom>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="owl1:sits"/>
+            </ObjectInverseOf>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="owl1:Man"/>
+            <Class abbreviatedIRI="owl1:Woman"/>
+        </ObjectUnionOf>
+        <Class abbreviatedIRI="owl1:Person"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="owl1:Person"/>
+        <Class abbreviatedIRI="owl1:Seat"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="owl1:Drunk"/>
+            <Class abbreviatedIRI="owl1:Woman"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="owl1:alice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl1:Seat"/>
+        <NamedIndividual abbreviatedIRI="owl1:bl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl1:Seat"/>
+        <NamedIndividual abbreviatedIRI="owl1:bm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="owl1:Drunk"/>
+            <Class abbreviatedIRI="owl1:Man"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="owl1:bob"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl1:Seat"/>
+        <NamedIndividual abbreviatedIRI="owl1:br"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl1:Woman"/>
+        <NamedIndividual abbreviatedIRI="owl1:claire"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="owl1:Drunk"/>
+            <Class abbreviatedIRI="owl1:Man"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="owl1:dan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl1:Woman"/>
+        <NamedIndividual abbreviatedIRI="owl1:eve"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl1:Seat"/>
+        <NamedIndividual abbreviatedIRI="owl1:fl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="owl1:sits"/>
+            </ObjectInverseOf>
+            <ObjectIntersectionOf>
+                <Class abbreviatedIRI="owl1:Person"/>
+                <ObjectComplementOf>
+                    <Class abbreviatedIRI="owl1:Drunk"/>
+                </ObjectComplementOf>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual abbreviatedIRI="owl1:fl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl1:Seat"/>
+        <NamedIndividual abbreviatedIRI="owl1:fr"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="owl1:next"/>
+        <NamedIndividual abbreviatedIRI="owl1:bm"/>
+        <NamedIndividual abbreviatedIRI="owl1:bl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="owl1:next"/>
+        <NamedIndividual abbreviatedIRI="owl1:br"/>
+        <NamedIndividual abbreviatedIRI="owl1:bm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="owl1:next"/>
+        <NamedIndividual abbreviatedIRI="owl1:fr"/>
+        <NamedIndividual abbreviatedIRI="owl1:fl"/>
+    </ObjectPropertyAssertion>
+    <SymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="owl1:next"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="owl1:next"/>
+        <Class abbreviatedIRI="owl1:Seat"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="owl1:sits"/>
+        <Class abbreviatedIRI="owl1:Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="owl1:next"/>
+        <Class abbreviatedIRI="owl1:Seat"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="owl1:sits"/>
+        <Class abbreviatedIRI="owl1:Seat"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

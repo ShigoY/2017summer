@@ -27,14 +27,14 @@ public class AuxiliaryAxioms {
 	public static String fixedDomainInClass(OWLClass c){
 		StringBuffer s=new StringBuffer();
 		String cname=convertor.getComponentsID(c);
-		s.append("![X]:("+cname+"(X)=>iThing(X))");
+		s.append("![X]:(("+cname+"(X)=>iThing(X))&(~"+cname+"(X)=>iThing(X)))");
 		return s.toString();
 	}
 	
 	public static String fixedDomainInObjectProperty(OWLObjectProperty r){
 		StringBuffer s=new StringBuffer();
 		String rname=convertor.getComponentsID(r);
-		s.append("![X,Y]:("+rname+"(X,Y)=>(iThing(X)&iThing(Y)))");
+		s.append("![X,Y]:(("+rname+"(X,Y)=>(iThing(X)&iThing(Y)))&(~"+rname+"(X,Y)=>(iThing(X)&iThing(Y))))");
 		return s.toString();
 	}
 	
@@ -53,11 +53,13 @@ public class AuxiliaryAxioms {
 			Stream<OWLNamedIndividual> inds=ontology.individualsInSignature(Imports.INCLUDED);
 			StringBuffer s=new StringBuffer();
 			s.append("![X]:(");
-			s.append("iThing(X)=>(");
+			//s.append("iThing(X)=>(");
 			inds.forEach(p->s.append("X="+convertor.getComponentsID((OWLIndividual)p)+"|"));
 			s.deleteCharAt(s.length()-1);
-			s.append("))");
-			System.out.println(convertor.addHeader(s.toString(),"fi"));
+			s.append(")");
+			if(s.equals("")==false) {
+				System.out.println(convertor.addHeader(s.toString(),"fi"));
+			}
 		}catch(NullPointerException e){
 			System.out.println("no domain element specified.");
 			e.printStackTrace();
