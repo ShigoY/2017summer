@@ -1,0 +1,42 @@
+
+FIMO 0.2
+
+FIMO is a system for computing finite models of first-order formulas. The input formulas
+can be written in TPTP format. FIMO uses iClingo for finding answer sets of the resulting
+logic program. An answer set represents a finite model of the input theory.
+
+FIMO is written in Python. The input formulas can be written in TPTP format. E is used for
+clausification.
+
+After extracting the tar ball the system is ready for use. You can use it by running:
+  
+  $ ./fimo -nosplit -iclingo-opts '--heuristic=Vsids --iheuristic=keep' %s
+
+where %s is the input file in TPTP format.
+
+Dependencies:
+-------------
+
+python: >= 2.6.5
+
+E (eprover):
+  This is needed for clausification. The executable coming in this package is the 
+  prebuilt E 1.3 Ringtong (64 bit) version downloaded directly from the E theorem prover webpage:
+  http://www4.informatik.tu-muenchen.de/~schulz/E/E.html
+
+TPTP2XML:
+  This program is used for parsing TPTP problem files. This comes within the Geoff's SystemTools 
+  package which can be downloaded from http://www.cs.miami.edu/~tptp/ServiceTools.tgz. The 
+  executable coming in this package is 64 bit compiled exe.
+
+iClingo:
+  iClingo is an incremental answer set solver. The executable coming in this package is version 
+  3.0.80 (64 bit).
+
+
+Contact:
+--------
+
+Author: Orkunt Sabuncu
+orkunt@cs.uni-potsdam.de
+orkunts@gmail.com

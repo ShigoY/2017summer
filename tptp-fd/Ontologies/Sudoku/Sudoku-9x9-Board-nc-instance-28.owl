@@ -1,0 +1,2560 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/wolpertinger/sudoku"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/wolpertinger/sudoku">
+    <Prefix name="" IRI="http://www.semanticweb.org/lschweizer/ontologies/2015/3/untitled-ontology-647#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents an empty 9x9 Sudokuboard game; i.e. no number is placed on any cell. Use one of the ABoxes (e.g. 9x9-Sudoku-Instance-01).</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI=":Three"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":s1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n88"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":c2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n76"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n64"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n52"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n92"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n48"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n36"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n24"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":s2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":r8"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n77"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n65"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n53"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n41"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n93"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":c9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n81"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n49"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n37"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n25"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n13"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":c1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n89"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":r7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":s9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n22"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n98"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":c4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n86"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n74"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Num"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n62"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Two"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n58"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n46"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n34"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":r2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":s4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n91"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n99"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n87"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":c3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n75"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n63"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n51"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Five"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":r9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n19"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n59"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n47"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n35"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n23"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":r1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":s3"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Col"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n44"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n32"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n96"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n84"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":c6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n72"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Four"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n28"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n68"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n56"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":r4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":s6"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Six"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n33"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n97"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":c5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n85"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":One"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n73"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n61"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n29"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n17"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n69"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n57"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n45"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":r3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":s5"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Row"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Eight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n66"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n54"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n42"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n94"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n82"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":c8"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Seven"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n38"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n26"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n14"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n78"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":r6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":s8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n55"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n43"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n31"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n95"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n83"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":c7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n71"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n39"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n27"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n15"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n79"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":n67"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Sqr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":r5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":s7"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Nine"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Col"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Eight"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Col"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Five"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Col"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Four"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Col"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Nine"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Col"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":One"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Col"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Seven"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Col"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Six"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Col"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Three"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Col"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Two"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Eight"/>
+        <Class abbreviatedIRI=":Num"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Five"/>
+        <Class abbreviatedIRI=":Num"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Four"/>
+        <Class abbreviatedIRI=":Num"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Nine"/>
+        <Class abbreviatedIRI=":Num"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This axiom yields a non-deterministic choice, ultimately translating to aguessing rule in ASP.</Literal>
+        </Annotation>
+        <Class abbreviatedIRI=":Num"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI=":Eight"/>
+            <Class abbreviatedIRI=":Five"/>
+            <Class abbreviatedIRI=":Four"/>
+            <Class abbreviatedIRI=":Nine"/>
+            <Class abbreviatedIRI=":One"/>
+            <Class abbreviatedIRI=":Seven"/>
+            <Class abbreviatedIRI=":Six"/>
+            <Class abbreviatedIRI=":Three"/>
+            <Class abbreviatedIRI=":Two"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":One"/>
+        <Class abbreviatedIRI=":Num"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Row"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Eight"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Row"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Five"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Row"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Four"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Row"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Nine"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Row"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":One"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Row"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Seven"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Row"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Six"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Row"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Three"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Row"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Two"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Seven"/>
+        <Class abbreviatedIRI=":Num"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Six"/>
+        <Class abbreviatedIRI=":Num"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Sqr"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Eight"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Sqr"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Five"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Sqr"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Four"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Sqr"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Nine"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Sqr"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":One"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Sqr"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Seven"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Sqr"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Six"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Sqr"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Three"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Sqr"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI=":hasNumber"/>
+            <Class abbreviatedIRI=":Two"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Three"/>
+        <Class abbreviatedIRI=":Num"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Two"/>
+        <Class abbreviatedIRI=":Num"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI=":Col"/>
+        <Class abbreviatedIRI=":Num"/>
+        <Class abbreviatedIRI=":Row"/>
+        <Class abbreviatedIRI=":Sqr"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI=":Eight"/>
+        <Class abbreviatedIRI=":Five"/>
+        <Class abbreviatedIRI=":Four"/>
+        <Class abbreviatedIRI=":Nine"/>
+        <Class abbreviatedIRI=":One"/>
+        <Class abbreviatedIRI=":Seven"/>
+        <Class abbreviatedIRI=":Six"/>
+        <Class abbreviatedIRI=":Three"/>
+        <Class abbreviatedIRI=":Two"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Col"/>
+        <NamedIndividual abbreviatedIRI=":c1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Col"/>
+        <NamedIndividual abbreviatedIRI=":c2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Col"/>
+        <NamedIndividual abbreviatedIRI=":c3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Col"/>
+        <NamedIndividual abbreviatedIRI=":c4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Col"/>
+        <NamedIndividual abbreviatedIRI=":c5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Col"/>
+        <NamedIndividual abbreviatedIRI=":c6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Col"/>
+        <NamedIndividual abbreviatedIRI=":c7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Col"/>
+        <NamedIndividual abbreviatedIRI=":c8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Col"/>
+        <NamedIndividual abbreviatedIRI=":c9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Two"/>
+        <NamedIndividual abbreviatedIRI=":n12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n13"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Five"/>
+        <NamedIndividual abbreviatedIRI=":n14"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n14"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n15"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":One"/>
+        <NamedIndividual abbreviatedIRI=":n16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n17"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n19"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Eight"/>
+        <NamedIndividual abbreviatedIRI=":n21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Five"/>
+        <NamedIndividual abbreviatedIRI=":n22"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n22"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n23"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n24"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Two"/>
+        <NamedIndividual abbreviatedIRI=":n24"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n25"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n26"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n27"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n28"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n29"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Six"/>
+        <NamedIndividual abbreviatedIRI=":n29"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n31"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":One"/>
+        <NamedIndividual abbreviatedIRI=":n31"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n32"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Three"/>
+        <NamedIndividual abbreviatedIRI=":n32"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n33"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n34"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n35"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n36"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n37"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n38"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Seven"/>
+        <NamedIndividual abbreviatedIRI=":n38"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n39"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Nine"/>
+        <NamedIndividual abbreviatedIRI=":n41"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n41"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n42"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n43"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n44"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n45"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n46"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n47"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Six"/>
+        <NamedIndividual abbreviatedIRI=":n47"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n48"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Four"/>
+        <NamedIndividual abbreviatedIRI=":n49"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n49"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n51"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n52"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n53"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n54"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n55"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Two"/>
+        <NamedIndividual abbreviatedIRI=":n55"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n56"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n57"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n58"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":One"/>
+        <NamedIndividual abbreviatedIRI=":n58"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Nine"/>
+        <NamedIndividual abbreviatedIRI=":n59"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n59"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n61"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n62"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n63"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n64"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n65"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n66"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n67"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Seven"/>
+        <NamedIndividual abbreviatedIRI=":n67"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n68"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n69"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n71"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n72"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Four"/>
+        <NamedIndividual abbreviatedIRI=":n73"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n73"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n74"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n75"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Three"/>
+        <NamedIndividual abbreviatedIRI=":n75"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n76"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n77"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Eight"/>
+        <NamedIndividual abbreviatedIRI=":n78"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n78"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n79"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n81"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Two"/>
+        <NamedIndividual abbreviatedIRI=":n81"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n82"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n83"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n84"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n85"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Four"/>
+        <NamedIndividual abbreviatedIRI=":n86"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n86"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n87"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n88"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Three"/>
+        <NamedIndividual abbreviatedIRI=":n88"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n89"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Seven"/>
+        <NamedIndividual abbreviatedIRI=":n89"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n91"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n92"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":One"/>
+        <NamedIndividual abbreviatedIRI=":n92"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Eight"/>
+        <NamedIndividual abbreviatedIRI=":n93"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n93"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Nine"/>
+        <NamedIndividual abbreviatedIRI=":n94"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n94"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Five"/>
+        <NamedIndividual abbreviatedIRI=":n95"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n95"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n96"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n97"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n98"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Six"/>
+        <NamedIndividual abbreviatedIRI=":n98"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Num"/>
+        <NamedIndividual abbreviatedIRI=":n99"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Row"/>
+        <NamedIndividual abbreviatedIRI=":r1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Row"/>
+        <NamedIndividual abbreviatedIRI=":r2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Row"/>
+        <NamedIndividual abbreviatedIRI=":r3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Row"/>
+        <NamedIndividual abbreviatedIRI=":r4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Row"/>
+        <NamedIndividual abbreviatedIRI=":r5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Row"/>
+        <NamedIndividual abbreviatedIRI=":r6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Row"/>
+        <NamedIndividual abbreviatedIRI=":r7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Row"/>
+        <NamedIndividual abbreviatedIRI=":r8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Row"/>
+        <NamedIndividual abbreviatedIRI=":r9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Sqr"/>
+        <NamedIndividual abbreviatedIRI=":s1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Sqr"/>
+        <NamedIndividual abbreviatedIRI=":s2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Sqr"/>
+        <NamedIndividual abbreviatedIRI=":s3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Sqr"/>
+        <NamedIndividual abbreviatedIRI=":s4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Sqr"/>
+        <NamedIndividual abbreviatedIRI=":s5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Sqr"/>
+        <NamedIndividual abbreviatedIRI=":s6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Sqr"/>
+        <NamedIndividual abbreviatedIRI=":s7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Sqr"/>
+        <NamedIndividual abbreviatedIRI=":s8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Sqr"/>
+        <NamedIndividual abbreviatedIRI=":s9"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual abbreviatedIRI=":c1"/>
+        <NamedIndividual abbreviatedIRI=":c2"/>
+        <NamedIndividual abbreviatedIRI=":c3"/>
+        <NamedIndividual abbreviatedIRI=":c4"/>
+        <NamedIndividual abbreviatedIRI=":c5"/>
+        <NamedIndividual abbreviatedIRI=":c6"/>
+        <NamedIndividual abbreviatedIRI=":c7"/>
+        <NamedIndividual abbreviatedIRI=":c8"/>
+        <NamedIndividual abbreviatedIRI=":c9"/>
+        <NamedIndividual abbreviatedIRI=":n11"/>
+        <NamedIndividual abbreviatedIRI=":n12"/>
+        <NamedIndividual abbreviatedIRI=":n13"/>
+        <NamedIndividual abbreviatedIRI=":n14"/>
+        <NamedIndividual abbreviatedIRI=":n15"/>
+        <NamedIndividual abbreviatedIRI=":n16"/>
+        <NamedIndividual abbreviatedIRI=":n17"/>
+        <NamedIndividual abbreviatedIRI=":n18"/>
+        <NamedIndividual abbreviatedIRI=":n19"/>
+        <NamedIndividual abbreviatedIRI=":n21"/>
+        <NamedIndividual abbreviatedIRI=":n22"/>
+        <NamedIndividual abbreviatedIRI=":n23"/>
+        <NamedIndividual abbreviatedIRI=":n24"/>
+        <NamedIndividual abbreviatedIRI=":n25"/>
+        <NamedIndividual abbreviatedIRI=":n26"/>
+        <NamedIndividual abbreviatedIRI=":n27"/>
+        <NamedIndividual abbreviatedIRI=":n28"/>
+        <NamedIndividual abbreviatedIRI=":n29"/>
+        <NamedIndividual abbreviatedIRI=":n31"/>
+        <NamedIndividual abbreviatedIRI=":n32"/>
+        <NamedIndividual abbreviatedIRI=":n33"/>
+        <NamedIndividual abbreviatedIRI=":n34"/>
+        <NamedIndividual abbreviatedIRI=":n35"/>
+        <NamedIndividual abbreviatedIRI=":n36"/>
+        <NamedIndividual abbreviatedIRI=":n37"/>
+        <NamedIndividual abbreviatedIRI=":n38"/>
+        <NamedIndividual abbreviatedIRI=":n39"/>
+        <NamedIndividual abbreviatedIRI=":n41"/>
+        <NamedIndividual abbreviatedIRI=":n42"/>
+        <NamedIndividual abbreviatedIRI=":n43"/>
+        <NamedIndividual abbreviatedIRI=":n44"/>
+        <NamedIndividual abbreviatedIRI=":n45"/>
+        <NamedIndividual abbreviatedIRI=":n46"/>
+        <NamedIndividual abbreviatedIRI=":n47"/>
+        <NamedIndividual abbreviatedIRI=":n48"/>
+        <NamedIndividual abbreviatedIRI=":n49"/>
+        <NamedIndividual abbreviatedIRI=":n51"/>
+        <NamedIndividual abbreviatedIRI=":n52"/>
+        <NamedIndividual abbreviatedIRI=":n53"/>
+        <NamedIndividual abbreviatedIRI=":n54"/>
+        <NamedIndividual abbreviatedIRI=":n55"/>
+        <NamedIndividual abbreviatedIRI=":n56"/>
+        <NamedIndividual abbreviatedIRI=":n57"/>
+        <NamedIndividual abbreviatedIRI=":n58"/>
+        <NamedIndividual abbreviatedIRI=":n59"/>
+        <NamedIndividual abbreviatedIRI=":n61"/>
+        <NamedIndividual abbreviatedIRI=":n62"/>
+        <NamedIndividual abbreviatedIRI=":n63"/>
+        <NamedIndividual abbreviatedIRI=":n64"/>
+        <NamedIndividual abbreviatedIRI=":n65"/>
+        <NamedIndividual abbreviatedIRI=":n66"/>
+        <NamedIndividual abbreviatedIRI=":n67"/>
+        <NamedIndividual abbreviatedIRI=":n68"/>
+        <NamedIndividual abbreviatedIRI=":n69"/>
+        <NamedIndividual abbreviatedIRI=":n71"/>
+        <NamedIndividual abbreviatedIRI=":n72"/>
+        <NamedIndividual abbreviatedIRI=":n73"/>
+        <NamedIndividual abbreviatedIRI=":n74"/>
+        <NamedIndividual abbreviatedIRI=":n75"/>
+        <NamedIndividual abbreviatedIRI=":n76"/>
+        <NamedIndividual abbreviatedIRI=":n77"/>
+        <NamedIndividual abbreviatedIRI=":n78"/>
+        <NamedIndividual abbreviatedIRI=":n79"/>
+        <NamedIndividual abbreviatedIRI=":n81"/>
+        <NamedIndividual abbreviatedIRI=":n82"/>
+        <NamedIndividual abbreviatedIRI=":n83"/>
+        <NamedIndividual abbreviatedIRI=":n84"/>
+        <NamedIndividual abbreviatedIRI=":n85"/>
+        <NamedIndividual abbreviatedIRI=":n86"/>
+        <NamedIndividual abbreviatedIRI=":n87"/>
+        <NamedIndividual abbreviatedIRI=":n88"/>
+        <NamedIndividual abbreviatedIRI=":n89"/>
+        <NamedIndividual abbreviatedIRI=":n91"/>
+        <NamedIndividual abbreviatedIRI=":n92"/>
+        <NamedIndividual abbreviatedIRI=":n93"/>
+        <NamedIndividual abbreviatedIRI=":n94"/>
+        <NamedIndividual abbreviatedIRI=":n95"/>
+        <NamedIndividual abbreviatedIRI=":n96"/>
+        <NamedIndividual abbreviatedIRI=":n97"/>
+        <NamedIndividual abbreviatedIRI=":n98"/>
+        <NamedIndividual abbreviatedIRI=":n99"/>
+        <NamedIndividual abbreviatedIRI=":r1"/>
+        <NamedIndividual abbreviatedIRI=":r2"/>
+        <NamedIndividual abbreviatedIRI=":r3"/>
+        <NamedIndividual abbreviatedIRI=":r4"/>
+        <NamedIndividual abbreviatedIRI=":r5"/>
+        <NamedIndividual abbreviatedIRI=":r6"/>
+        <NamedIndividual abbreviatedIRI=":r7"/>
+        <NamedIndividual abbreviatedIRI=":r8"/>
+        <NamedIndividual abbreviatedIRI=":r9"/>
+        <NamedIndividual abbreviatedIRI=":s1"/>
+        <NamedIndividual abbreviatedIRI=":s2"/>
+        <NamedIndividual abbreviatedIRI=":s3"/>
+        <NamedIndividual abbreviatedIRI=":s4"/>
+        <NamedIndividual abbreviatedIRI=":s5"/>
+        <NamedIndividual abbreviatedIRI=":s6"/>
+        <NamedIndividual abbreviatedIRI=":s7"/>
+        <NamedIndividual abbreviatedIRI=":s8"/>
+        <NamedIndividual abbreviatedIRI=":s9"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c1"/>
+        <NamedIndividual abbreviatedIRI=":n11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c1"/>
+        <NamedIndividual abbreviatedIRI=":n21"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c1"/>
+        <NamedIndividual abbreviatedIRI=":n31"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c1"/>
+        <NamedIndividual abbreviatedIRI=":n41"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c1"/>
+        <NamedIndividual abbreviatedIRI=":n51"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c1"/>
+        <NamedIndividual abbreviatedIRI=":n61"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c1"/>
+        <NamedIndividual abbreviatedIRI=":n71"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c1"/>
+        <NamedIndividual abbreviatedIRI=":n81"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c1"/>
+        <NamedIndividual abbreviatedIRI=":n91"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c2"/>
+        <NamedIndividual abbreviatedIRI=":n12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c2"/>
+        <NamedIndividual abbreviatedIRI=":n22"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c2"/>
+        <NamedIndividual abbreviatedIRI=":n32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c2"/>
+        <NamedIndividual abbreviatedIRI=":n42"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c2"/>
+        <NamedIndividual abbreviatedIRI=":n52"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c2"/>
+        <NamedIndividual abbreviatedIRI=":n62"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c2"/>
+        <NamedIndividual abbreviatedIRI=":n72"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c2"/>
+        <NamedIndividual abbreviatedIRI=":n82"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c2"/>
+        <NamedIndividual abbreviatedIRI=":n92"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c3"/>
+        <NamedIndividual abbreviatedIRI=":n13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c3"/>
+        <NamedIndividual abbreviatedIRI=":n23"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c3"/>
+        <NamedIndividual abbreviatedIRI=":n33"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c3"/>
+        <NamedIndividual abbreviatedIRI=":n43"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c3"/>
+        <NamedIndividual abbreviatedIRI=":n53"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c3"/>
+        <NamedIndividual abbreviatedIRI=":n63"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c3"/>
+        <NamedIndividual abbreviatedIRI=":n73"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c3"/>
+        <NamedIndividual abbreviatedIRI=":n83"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c3"/>
+        <NamedIndividual abbreviatedIRI=":n93"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c4"/>
+        <NamedIndividual abbreviatedIRI=":n14"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c4"/>
+        <NamedIndividual abbreviatedIRI=":n24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c4"/>
+        <NamedIndividual abbreviatedIRI=":n34"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c4"/>
+        <NamedIndividual abbreviatedIRI=":n44"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c4"/>
+        <NamedIndividual abbreviatedIRI=":n54"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c4"/>
+        <NamedIndividual abbreviatedIRI=":n64"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c4"/>
+        <NamedIndividual abbreviatedIRI=":n74"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c4"/>
+        <NamedIndividual abbreviatedIRI=":n84"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c4"/>
+        <NamedIndividual abbreviatedIRI=":n94"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c5"/>
+        <NamedIndividual abbreviatedIRI=":n15"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c5"/>
+        <NamedIndividual abbreviatedIRI=":n25"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c5"/>
+        <NamedIndividual abbreviatedIRI=":n35"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c5"/>
+        <NamedIndividual abbreviatedIRI=":n45"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c5"/>
+        <NamedIndividual abbreviatedIRI=":n55"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c5"/>
+        <NamedIndividual abbreviatedIRI=":n65"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c5"/>
+        <NamedIndividual abbreviatedIRI=":n75"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c5"/>
+        <NamedIndividual abbreviatedIRI=":n85"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c5"/>
+        <NamedIndividual abbreviatedIRI=":n95"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c6"/>
+        <NamedIndividual abbreviatedIRI=":n16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c6"/>
+        <NamedIndividual abbreviatedIRI=":n26"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c6"/>
+        <NamedIndividual abbreviatedIRI=":n36"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c6"/>
+        <NamedIndividual abbreviatedIRI=":n46"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c6"/>
+        <NamedIndividual abbreviatedIRI=":n56"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c6"/>
+        <NamedIndividual abbreviatedIRI=":n66"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c6"/>
+        <NamedIndividual abbreviatedIRI=":n76"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c6"/>
+        <NamedIndividual abbreviatedIRI=":n86"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c6"/>
+        <NamedIndividual abbreviatedIRI=":n96"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c7"/>
+        <NamedIndividual abbreviatedIRI=":n17"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c7"/>
+        <NamedIndividual abbreviatedIRI=":n27"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c7"/>
+        <NamedIndividual abbreviatedIRI=":n37"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c7"/>
+        <NamedIndividual abbreviatedIRI=":n47"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c7"/>
+        <NamedIndividual abbreviatedIRI=":n57"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c7"/>
+        <NamedIndividual abbreviatedIRI=":n67"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c7"/>
+        <NamedIndividual abbreviatedIRI=":n77"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c7"/>
+        <NamedIndividual abbreviatedIRI=":n87"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c7"/>
+        <NamedIndividual abbreviatedIRI=":n97"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c8"/>
+        <NamedIndividual abbreviatedIRI=":n18"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c8"/>
+        <NamedIndividual abbreviatedIRI=":n28"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c8"/>
+        <NamedIndividual abbreviatedIRI=":n38"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c8"/>
+        <NamedIndividual abbreviatedIRI=":n48"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c8"/>
+        <NamedIndividual abbreviatedIRI=":n58"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c8"/>
+        <NamedIndividual abbreviatedIRI=":n68"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c8"/>
+        <NamedIndividual abbreviatedIRI=":n78"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c8"/>
+        <NamedIndividual abbreviatedIRI=":n88"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c8"/>
+        <NamedIndividual abbreviatedIRI=":n98"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c9"/>
+        <NamedIndividual abbreviatedIRI=":n19"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c9"/>
+        <NamedIndividual abbreviatedIRI=":n29"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c9"/>
+        <NamedIndividual abbreviatedIRI=":n39"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c9"/>
+        <NamedIndividual abbreviatedIRI=":n49"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c9"/>
+        <NamedIndividual abbreviatedIRI=":n59"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c9"/>
+        <NamedIndividual abbreviatedIRI=":n69"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c9"/>
+        <NamedIndividual abbreviatedIRI=":n79"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c9"/>
+        <NamedIndividual abbreviatedIRI=":n89"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":c9"/>
+        <NamedIndividual abbreviatedIRI=":n99"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r1"/>
+        <NamedIndividual abbreviatedIRI=":n11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r1"/>
+        <NamedIndividual abbreviatedIRI=":n12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r1"/>
+        <NamedIndividual abbreviatedIRI=":n13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r1"/>
+        <NamedIndividual abbreviatedIRI=":n14"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r1"/>
+        <NamedIndividual abbreviatedIRI=":n15"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r1"/>
+        <NamedIndividual abbreviatedIRI=":n16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r1"/>
+        <NamedIndividual abbreviatedIRI=":n17"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r1"/>
+        <NamedIndividual abbreviatedIRI=":n18"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r1"/>
+        <NamedIndividual abbreviatedIRI=":n19"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r2"/>
+        <NamedIndividual abbreviatedIRI=":n21"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r2"/>
+        <NamedIndividual abbreviatedIRI=":n22"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r2"/>
+        <NamedIndividual abbreviatedIRI=":n23"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r2"/>
+        <NamedIndividual abbreviatedIRI=":n24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r2"/>
+        <NamedIndividual abbreviatedIRI=":n25"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r2"/>
+        <NamedIndividual abbreviatedIRI=":n26"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r2"/>
+        <NamedIndividual abbreviatedIRI=":n27"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r2"/>
+        <NamedIndividual abbreviatedIRI=":n28"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r2"/>
+        <NamedIndividual abbreviatedIRI=":n29"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r3"/>
+        <NamedIndividual abbreviatedIRI=":n31"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r3"/>
+        <NamedIndividual abbreviatedIRI=":n32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r3"/>
+        <NamedIndividual abbreviatedIRI=":n33"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r3"/>
+        <NamedIndividual abbreviatedIRI=":n34"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r3"/>
+        <NamedIndividual abbreviatedIRI=":n35"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r3"/>
+        <NamedIndividual abbreviatedIRI=":n36"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r3"/>
+        <NamedIndividual abbreviatedIRI=":n37"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r3"/>
+        <NamedIndividual abbreviatedIRI=":n38"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r3"/>
+        <NamedIndividual abbreviatedIRI=":n39"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r4"/>
+        <NamedIndividual abbreviatedIRI=":n41"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r4"/>
+        <NamedIndividual abbreviatedIRI=":n42"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r4"/>
+        <NamedIndividual abbreviatedIRI=":n43"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r4"/>
+        <NamedIndividual abbreviatedIRI=":n44"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r4"/>
+        <NamedIndividual abbreviatedIRI=":n45"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r4"/>
+        <NamedIndividual abbreviatedIRI=":n46"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r4"/>
+        <NamedIndividual abbreviatedIRI=":n47"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r4"/>
+        <NamedIndividual abbreviatedIRI=":n48"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r4"/>
+        <NamedIndividual abbreviatedIRI=":n49"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r5"/>
+        <NamedIndividual abbreviatedIRI=":n51"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r5"/>
+        <NamedIndividual abbreviatedIRI=":n52"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r5"/>
+        <NamedIndividual abbreviatedIRI=":n53"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r5"/>
+        <NamedIndividual abbreviatedIRI=":n54"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r5"/>
+        <NamedIndividual abbreviatedIRI=":n55"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r5"/>
+        <NamedIndividual abbreviatedIRI=":n56"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r5"/>
+        <NamedIndividual abbreviatedIRI=":n57"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r5"/>
+        <NamedIndividual abbreviatedIRI=":n58"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r5"/>
+        <NamedIndividual abbreviatedIRI=":n59"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r6"/>
+        <NamedIndividual abbreviatedIRI=":n61"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r6"/>
+        <NamedIndividual abbreviatedIRI=":n62"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r6"/>
+        <NamedIndividual abbreviatedIRI=":n63"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r6"/>
+        <NamedIndividual abbreviatedIRI=":n64"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r6"/>
+        <NamedIndividual abbreviatedIRI=":n65"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r6"/>
+        <NamedIndividual abbreviatedIRI=":n66"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r6"/>
+        <NamedIndividual abbreviatedIRI=":n67"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r6"/>
+        <NamedIndividual abbreviatedIRI=":n68"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r6"/>
+        <NamedIndividual abbreviatedIRI=":n69"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r7"/>
+        <NamedIndividual abbreviatedIRI=":n71"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r7"/>
+        <NamedIndividual abbreviatedIRI=":n72"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r7"/>
+        <NamedIndividual abbreviatedIRI=":n73"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r7"/>
+        <NamedIndividual abbreviatedIRI=":n74"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r7"/>
+        <NamedIndividual abbreviatedIRI=":n75"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r7"/>
+        <NamedIndividual abbreviatedIRI=":n76"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r7"/>
+        <NamedIndividual abbreviatedIRI=":n77"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r7"/>
+        <NamedIndividual abbreviatedIRI=":n78"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r7"/>
+        <NamedIndividual abbreviatedIRI=":n79"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r8"/>
+        <NamedIndividual abbreviatedIRI=":n81"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r8"/>
+        <NamedIndividual abbreviatedIRI=":n82"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r8"/>
+        <NamedIndividual abbreviatedIRI=":n83"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r8"/>
+        <NamedIndividual abbreviatedIRI=":n84"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r8"/>
+        <NamedIndividual abbreviatedIRI=":n85"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r8"/>
+        <NamedIndividual abbreviatedIRI=":n86"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r8"/>
+        <NamedIndividual abbreviatedIRI=":n87"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r8"/>
+        <NamedIndividual abbreviatedIRI=":n88"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r8"/>
+        <NamedIndividual abbreviatedIRI=":n89"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r9"/>
+        <NamedIndividual abbreviatedIRI=":n91"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r9"/>
+        <NamedIndividual abbreviatedIRI=":n92"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r9"/>
+        <NamedIndividual abbreviatedIRI=":n93"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r9"/>
+        <NamedIndividual abbreviatedIRI=":n94"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r9"/>
+        <NamedIndividual abbreviatedIRI=":n95"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r9"/>
+        <NamedIndividual abbreviatedIRI=":n96"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r9"/>
+        <NamedIndividual abbreviatedIRI=":n97"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r9"/>
+        <NamedIndividual abbreviatedIRI=":n98"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":r9"/>
+        <NamedIndividual abbreviatedIRI=":n99"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s1"/>
+        <NamedIndividual abbreviatedIRI=":n11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s1"/>
+        <NamedIndividual abbreviatedIRI=":n12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s1"/>
+        <NamedIndividual abbreviatedIRI=":n13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s1"/>
+        <NamedIndividual abbreviatedIRI=":n21"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s1"/>
+        <NamedIndividual abbreviatedIRI=":n22"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s1"/>
+        <NamedIndividual abbreviatedIRI=":n23"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s1"/>
+        <NamedIndividual abbreviatedIRI=":n31"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s1"/>
+        <NamedIndividual abbreviatedIRI=":n32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s1"/>
+        <NamedIndividual abbreviatedIRI=":n33"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s2"/>
+        <NamedIndividual abbreviatedIRI=":n14"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s2"/>
+        <NamedIndividual abbreviatedIRI=":n15"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s2"/>
+        <NamedIndividual abbreviatedIRI=":n16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s2"/>
+        <NamedIndividual abbreviatedIRI=":n24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s2"/>
+        <NamedIndividual abbreviatedIRI=":n25"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s2"/>
+        <NamedIndividual abbreviatedIRI=":n26"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s2"/>
+        <NamedIndividual abbreviatedIRI=":n34"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s2"/>
+        <NamedIndividual abbreviatedIRI=":n35"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s2"/>
+        <NamedIndividual abbreviatedIRI=":n36"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s3"/>
+        <NamedIndividual abbreviatedIRI=":n17"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s3"/>
+        <NamedIndividual abbreviatedIRI=":n18"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s3"/>
+        <NamedIndividual abbreviatedIRI=":n19"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s3"/>
+        <NamedIndividual abbreviatedIRI=":n27"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s3"/>
+        <NamedIndividual abbreviatedIRI=":n28"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s3"/>
+        <NamedIndividual abbreviatedIRI=":n29"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s3"/>
+        <NamedIndividual abbreviatedIRI=":n37"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s3"/>
+        <NamedIndividual abbreviatedIRI=":n38"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s3"/>
+        <NamedIndividual abbreviatedIRI=":n39"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s4"/>
+        <NamedIndividual abbreviatedIRI=":n41"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s4"/>
+        <NamedIndividual abbreviatedIRI=":n42"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s4"/>
+        <NamedIndividual abbreviatedIRI=":n43"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s4"/>
+        <NamedIndividual abbreviatedIRI=":n51"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s4"/>
+        <NamedIndividual abbreviatedIRI=":n52"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s4"/>
+        <NamedIndividual abbreviatedIRI=":n53"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s4"/>
+        <NamedIndividual abbreviatedIRI=":n61"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s4"/>
+        <NamedIndividual abbreviatedIRI=":n62"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s4"/>
+        <NamedIndividual abbreviatedIRI=":n63"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s5"/>
+        <NamedIndividual abbreviatedIRI=":n44"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s5"/>
+        <NamedIndividual abbreviatedIRI=":n45"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s5"/>
+        <NamedIndividual abbreviatedIRI=":n46"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s5"/>
+        <NamedIndividual abbreviatedIRI=":n54"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s5"/>
+        <NamedIndividual abbreviatedIRI=":n55"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s5"/>
+        <NamedIndividual abbreviatedIRI=":n56"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s5"/>
+        <NamedIndividual abbreviatedIRI=":n64"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s5"/>
+        <NamedIndividual abbreviatedIRI=":n65"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s5"/>
+        <NamedIndividual abbreviatedIRI=":n66"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s6"/>
+        <NamedIndividual abbreviatedIRI=":n47"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s6"/>
+        <NamedIndividual abbreviatedIRI=":n48"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s6"/>
+        <NamedIndividual abbreviatedIRI=":n49"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s6"/>
+        <NamedIndividual abbreviatedIRI=":n57"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s6"/>
+        <NamedIndividual abbreviatedIRI=":n58"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s6"/>
+        <NamedIndividual abbreviatedIRI=":n59"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s6"/>
+        <NamedIndividual abbreviatedIRI=":n67"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s6"/>
+        <NamedIndividual abbreviatedIRI=":n68"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s6"/>
+        <NamedIndividual abbreviatedIRI=":n69"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s7"/>
+        <NamedIndividual abbreviatedIRI=":n71"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s7"/>
+        <NamedIndividual abbreviatedIRI=":n72"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s7"/>
+        <NamedIndividual abbreviatedIRI=":n73"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s7"/>
+        <NamedIndividual abbreviatedIRI=":n81"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s7"/>
+        <NamedIndividual abbreviatedIRI=":n82"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s7"/>
+        <NamedIndividual abbreviatedIRI=":n83"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s7"/>
+        <NamedIndividual abbreviatedIRI=":n91"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s7"/>
+        <NamedIndividual abbreviatedIRI=":n92"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s7"/>
+        <NamedIndividual abbreviatedIRI=":n93"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s8"/>
+        <NamedIndividual abbreviatedIRI=":n74"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s8"/>
+        <NamedIndividual abbreviatedIRI=":n75"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s8"/>
+        <NamedIndividual abbreviatedIRI=":n76"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s8"/>
+        <NamedIndividual abbreviatedIRI=":n84"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s8"/>
+        <NamedIndividual abbreviatedIRI=":n85"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s8"/>
+        <NamedIndividual abbreviatedIRI=":n86"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s8"/>
+        <NamedIndividual abbreviatedIRI=":n94"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s8"/>
+        <NamedIndividual abbreviatedIRI=":n95"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s8"/>
+        <NamedIndividual abbreviatedIRI=":n96"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s9"/>
+        <NamedIndividual abbreviatedIRI=":n77"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s9"/>
+        <NamedIndividual abbreviatedIRI=":n78"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s9"/>
+        <NamedIndividual abbreviatedIRI=":n79"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s9"/>
+        <NamedIndividual abbreviatedIRI=":n87"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s9"/>
+        <NamedIndividual abbreviatedIRI=":n88"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s9"/>
+        <NamedIndividual abbreviatedIRI=":n89"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s9"/>
+        <NamedIndividual abbreviatedIRI=":n97"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s9"/>
+        <NamedIndividual abbreviatedIRI=":n98"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <NamedIndividual abbreviatedIRI=":s9"/>
+        <NamedIndividual abbreviatedIRI=":n99"/>
+    </ObjectPropertyAssertion>
+    <AsymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":hasNumber"/>
+        <Class abbreviatedIRI=":Num"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Col</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents a column in 9x9 Sudoku.
+
+Each column has exactly 1 One ...Nine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Num</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents one of the numbers One ... Nine
+Initially we assign all 81 individuals n11...n99 to this class.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Row</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents one of 9 Rows in a 9x9 Sudko.
+
+Each row has exactly 1 One ...Nine.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Sqr</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents one of the 9 Squares in a 9x9 Sudoku.
+
+Each square has exactly 1 One ...Nine.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+

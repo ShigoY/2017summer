@@ -1,0 +1,159 @@
+#!/bin/bash
+
+#
+# Orkunt Sabuncu
+#
+
+FIMODIR=$(dirname $0)
+
+TRANSFORM=$FIMODIR/transform.py
+DESKOLEMIZE=$FIMODIR/deskolemize.py
+SPLITTER=$FIMODIR/splitter.py
+RESERVE_WORDS=$FIMODIR/change_reserved_words
+
+if [ -e $FIMODIR/iclingo-3.0.80 ] ; then
+  ICLINGO_BIN=$FIMODIR/iclingo-3.0.80
+else
+  ICLINGO_BIN=iclingo-banane
+fi
+if [ -e $FIMODIR/iclingo-3.0.80 ] ; then
+  OLD_ICLINGO_BIN=$FIMODIR/iclingo-3.0.80
+else
+  OLD_ICLINGO_BIN=iclingo-banane
+fi
+if [ -e $FIMODIR/eprover ] ; then
+  EPROVER_BIN=$FIMODIR/eprover
+else
+  EPROVER_BIN=eprover
+fi
+if [ -e $FIMODIR/TPTP2XML ] ; then
+  TPTP2XML_BIN=$FIMODIR/TPTP2XML
+else
+  TPTP2XML_BIN=TPTP2XML
+fi
+
+
+USAGE="Usage: fimo [-nosplit] [-nodeskol] [-iclingo iclingo_path] 
+                   [-iclingo-opts ".."] [-old-iclingo old_iclingo_path] [-pipe] tptp-problem-file"
+
+if [ -z "$1" ]; then 
+  echo $USAGE
+  #$TRANSFORM -h
+  exit $?
+fi
+
+args=()
+nosplit=0
+nodeskol=0
+pipe=0
+iclingo_opts=""
+PROBLEM=""
+has_conj="false"
+
+while [ "$1" ]; do
+  if [ "$1" = "-nosplit" ] ; then
+    nosplit=1
+  elif [ "$1" = "-nodeskol" ] ; then
+    nodeskol=1
+  elif [ "$1" = "-iclingo-opts" ] ; then
+    iclingo_opts="$2"
+    shift
+  elif [ "$1" = "-iclingo" ] ; then
+    ICLINGO_BIN="$2"
+    shift
+  elif [ "$1" = "-old-iclingo" ] ; then
+    OLD_ICLINGO_BIN="$2"
+    shift
+  elif [ "$1" = "-pipe" ] ; then
+    pipe=1
+  else
+    if [ "$#" = 1 ] ; then
+      PROBLEM="$1"
+    else
+      args+=("$1")
+    fi
+  fi
+  shift
+done
+
+tmp=$( grep -l ",[ ]*conjecture[ ]*," $PROBLEM )
+# echo $tmp
+if [ "$tmp" = "$PROBLEM" ] ; then
+  has_conj="true"
+fi
+
+if [ $nosplit = 1 ] && [ $nodeskol = 1 ] ; then
+  # Basic call
+  if [ $pipe = 1 ] ; then
+    $EPROVER_BIN --cnf --tstp-format $PROBLEM | \
+    $RESERVE_WORDS | \
+    $TPTP2XML_BIN - | \
+    $TRANSFORM --has-conjecture $has_conj --old-iclingo-bin=$OLD_ICLINGO_BIN "${args[@]}" | \
+    $ICLINGO_BIN $iclingo_opts
+  else
+    $EPROVER_BIN --cnf --tstp-format $PROBLEM | \
+    $RESERVE_WORDS | \
+    $TPTP2XML_BIN - | \
+    $TRANSFORM --has-conjecture $has_conj -r true --old-iclingo-bin=$OLD_ICLINGO_BIN --iclingo-bin=$ICLINGO_BIN --iclingo-opts="$iclingo_opts" "${args[@]}"
+  fi
+elif [ $nosplit = 1 ] ; then
+   # No splitting
+   if [ $pipe = 1 ] ; then
+    $EPROVER_BIN --cnf --tstp-format $PROBLEM | \
+    $RESERVE_WORDS | \
+    $TPTP2XML_BIN -T - | \
+    $DESKOLEMIZE | \
+    $TPTP2XML_BIN - | \
+    $TRANSFORM --has-conjecture $has_conj --old-iclingo-bin=$OLD_ICLINGO_BIN "${args[@]}" | \
+    $ICLINGO_BIN $iclingo_opts
+  else
+    $EPROVER_BIN --cnf --tstp-format $PROBLEM | \
+    $RESERVE_WORDS | \
+    $TPTP2XML_BIN -T - | \
+    $DESKOLEMIZE | \
+    $TPTP2XML_BIN - | \
+    $TRANSFORM --has-conjecture $has_conj -r true --old-iclingo-bin=$OLD_ICLINGO_BIN --iclingo-bin=$ICLINGO_BIN --iclingo-opts="$iclingo_opts" "${args[@]}"
+  fi
+elif [ $nodeskol = 1 ] ; then
+  # No deskolemize
+  if [ $pipe = 1 ] ; then
+    $EPROVER_BIN --cnf --tstp-format $PROBLEM | \
+    $RESERVE_WORDS | \
+    $TPTP2XML_BIN -T - | \
+    $SPLITTER --iclingo-bin=$ICLINGO_BIN | \
+    $TPTP2XML_BIN - | \
+    $TRANSFORM --has-conjecture $has_conj --old-iclingo-bin=$OLD_ICLINGO_BIN "${args[@]}" | \
+    $ICLINGO_BIN $iclingo_opts
+  else
+    $EPROVER_BIN --cnf --tstp-format $PROBLEM | \
+    $RESERVE_WORDS | \
+    $TPTP2XML_BIN -T - | \
+    $SPLITTER --iclingo-bin=$ICLINGO_BIN | \
+    $TPTP2XML_BIN - | \
+    $TRANSFORM --has-conjecture $has_conj -r true --old-iclingo-bin=$OLD_ICLINGO_BIN --iclingo-bin=$ICLINGO_BIN --iclingo-opts="$iclingo_opts" "${args[@]}"
+  fi
+else
+  # Full
+  if [ $pipe = 1 ] ; then
+    $EPROVER_BIN --cnf --tstp-format $PROBLEM | \
+    $RESERVE_WORDS | \
+    $TPTP2XML_BIN -T - | \
+    $SPLITTER --iclingo-bin=$ICLINGO_BIN | \
+    $TPTP2XML_BIN -T - | \
+    $DESKOLEMIZE | \
+    $TPTP2XML_BIN - | \
+    $TRANSFORM --has-conjecture $has_conj --old-iclingo-bin=$OLD_ICLINGO_BIN "${args[@]}" | \
+    $ICLINGO_BIN $iclingo_opts
+  else
+    $EPROVER_BIN --cnf --tstp-format $PROBLEM | \
+    $RESERVE_WORDS | \
+    $TPTP2XML_BIN -T - | \
+    $SPLITTER --iclingo-bin=$ICLINGO_BIN | \
+    $TPTP2XML_BIN -T - | \
+    $DESKOLEMIZE | \
+    $TPTP2XML_BIN - | \
+    $TRANSFORM --has-conjecture $has_conj -r true --old-iclingo-bin=$OLD_ICLINGO_BIN --iclingo-bin=$ICLINGO_BIN --iclingo-opts="$iclingo_opts" "${args[@]}"
+  fi
+fi
+
+exit $?

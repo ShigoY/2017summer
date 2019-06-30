@@ -1,0 +1,16 @@
+init(1,2).
+init(2,3).
+init(3,7).
+init(4,4).
+init(5,1).
+init(6,0).
+init(7,6).
+init(8,10).
+init(9,5).
+init(10,14).
+init(11,9).
+init(12,8).
+init(13,13).
+init(14,15).
+init(15,12).
+init(16,11).
